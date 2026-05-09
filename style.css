@@ -44,6 +44,7 @@ header {
     top: 2rem;
     padding: 2rem 6rem;
     background-color: #ffffffbe;
+    z-index: 1;
 }
 
 nav {
@@ -211,7 +212,9 @@ a:hover {
 }
 
 .card-1, .card-2, .card-3 {
+    position: relative;
     min-width: 10rem;
+
     height: auto;
     background-color: rgb(247, 247, 247);
     padding: 1rem;
@@ -225,3 +228,37 @@ a:hover {
 .ratings {
     cursor: pointer;
 }
+
+.food-type {
+    text-decoration: underline;
+}
+
+.img-container {
+    position: relative;
+    transition: all 0.1s ease-in;
+}
+
+.see-more-btn {
+    position: absolute;
+    bottom: 5rem;
+    right: 15rem;
+    transform: translate(-10%, -10%);
+    background-color: none;
+    padding: 0.5rem 1rem;
+    text-decoration: underline;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+
+.card-1:hover .see-more-btn,
+.card-2:hover .see-more-btn,
+.card-3:hover .see-more-btn {
+    opacity: 1;
+}
+
+.card-1:hover .img-container,
+.card-2:hover .img-container,
+.card-3:hover .img-container {
+    opacity: 0.5;
+    background-color: rgba(227, 227, 227, 0.65);
+}   
